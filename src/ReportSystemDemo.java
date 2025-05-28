@@ -31,8 +31,7 @@ public class ReportSystemDemo {
         // Demonstrate other classes
         System.out.println("\n=== Supporting Classes Demo ===");
 
-        Database db = new Database("MySQL", "jdbc:mysql://localhost:3306/reports",
-                "admin", "password");
+        Database db = Database.getInstance("MySQL", "jdbc:mysql://localhost:3306/reports", "admin", "password");
         System.out.println("5. " + db.generateReport());
 
         ContactCategory category = new ContactCategory("CC001", "Business Contacts");
